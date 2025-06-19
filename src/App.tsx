@@ -11,7 +11,6 @@ import {
   DropdownMenu,
   DropdownTrigger,
   Link,
-  Progress,
   Tab,
   Tabs,
 } from '@heroui/react'
@@ -133,7 +132,7 @@ const App: React.FC = () => {
                       React (Mui, HeroUI, Radix)
                     </Chip>
                   </div>
-                  <div className='mt-2'>
+                  <div className="mt-2">
                     <li>Backend</li>
                   </div>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -141,7 +140,7 @@ const App: React.FC = () => {
                       Java(Spring Boot, Spring Data JPA, Spring Security)
                     </Chip>
                   </div>
-                  <div className='mt-2'>
+                  <div className="mt-2">
                     <li>{t('tools')}</li>
                   </div>
                   <div className="flex flex-wrap gap-2 mt-2">
@@ -165,7 +164,6 @@ const App: React.FC = () => {
                     </Chip>
                   </div>
                 </div>
-
 
                 <div>
                   <h2 className="text-xl font-semibold mb-2">
@@ -193,11 +191,11 @@ const App: React.FC = () => {
                   <p className="font-semibold">{t('company1Position')}</p>
                   <p className="text-default-500">{t('company1Period')}</p>
                   <ul className="list-disc list-inside mt-2">
-                    {t('company1Tasks', { returnObjects: true }).map(
-                      (task, index) => (
-                        <li key={index}>{task}</li>
-                      )
-                    )}
+                    {(
+                      t('company1Tasks', { returnObjects: true }) as string[]
+                    ).map((task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
@@ -209,11 +207,11 @@ const App: React.FC = () => {
                   <p className="font-semibold">{t('company2Position')}</p>
                   <p className="text-default-500">{t('company2Period')}</p>
                   <ul className="list-disc list-inside mt-2">
-                    {t('company2Tasks', { returnObjects: true }).map(
-                      (task, index) => (
-                        <li key={index}>{task}</li>
-                      )
-                    )}
+                    {(
+                      t('company2Tasks', { returnObjects: true }) as string[]
+                    ).map((task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    ))}
                   </ul>
                 </div>
 
@@ -226,11 +224,11 @@ const App: React.FC = () => {
                   <p className="font-semibold">{t('company3Position')}</p>
                   <p className="text-default-500">{t('company3Period')}</p>
                   <ul className="list-disc list-inside mt-2">
-                    {t('company3Tasks', { returnObjects: true }).map(
-                      (task, index) => (
-                        <li key={index}>{task}</li>
-                      )
-                    )}
+                    {(
+                      t('company3Tasks', { returnObjects: true }) as string[]
+                    ).map((task: string, index: number) => (
+                      <li key={index}>{task}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
